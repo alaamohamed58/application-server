@@ -15,7 +15,7 @@ on:
 
 jobs:
   test_and_build:
-    runs-on: ubuntu-22
+    runs-on: ubuntu-latest
 
     steps:
        #clone code on VM/runner
