@@ -73,7 +73,7 @@ jobs:
             whoami
             ls -al
             npm install
-            pm2 restart app || pm2 start npm --name "app" --start
+            npm start
     
 
   
