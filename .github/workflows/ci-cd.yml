@@ -35,6 +35,12 @@ jobs:
       - name: build code
         run: npm run build
 
+      - name: Upload atrifact
+        uses: actions/upload-atrifact@v4
+        with:
+          name: dist
+          path: dist/
+
   deploy:
     runs-on: ubuntu-latest
     needs: test_and_build
@@ -42,6 +48,13 @@ jobs:
     steps:
       - name: clone the code
         uses: actions/checkout@v5
+
+      - name: Download atrifact
+        uses: actions/download-artifacts@v4
+        with: 
+          name: dist
+          path: dist/
+          
 
       - name: Deploy to Staging server
         uses: easingthemes/ssh-deploy@main
