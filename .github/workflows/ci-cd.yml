@@ -72,7 +72,8 @@ jobs:
           SCRIPT_AFTER: |
             whoami
             ls -al
-            echo $RSYNC_STDOUT
+            npm install
+            npm start
     
 
   
