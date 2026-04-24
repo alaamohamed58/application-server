@@ -70,7 +70,7 @@ jobs:
             whoami
             ls -al
           SCRIPT_AFTER: |
-            cd ${{ secrets.REMOTE_TARGET }}/app
+            cd ${{ secrets.REMOTE_TARGET }}
             npm install
             npm start
     
