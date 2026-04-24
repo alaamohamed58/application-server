@@ -72,7 +72,7 @@ jobs:
           SCRIPT_AFTER: |
             cd ${{ secrets.REMOTE_TARGET }}
             npm install
-            npm start
+            pm2 restart app || pm2 start npm --name "app" --start
     
 
   
