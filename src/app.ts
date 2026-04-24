@@ -8,7 +8,7 @@ function bootstrap() {
 
     if (method === "GET" && url === "/") {
       res.writeHead(200, { "Content-Type": "application/json" });
-      res.end(JSON.stringify({ message: "Hello World" }));
+      res.end(JSON.stringify({ message: "Updated Message" }));
       return;
     }
 
