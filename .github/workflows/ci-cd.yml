@@ -49,6 +49,7 @@ jobs:
   
   deploy:
     runs-on: ubuntu-latest
+    needs: test_and_build
     steps:
       - name: download artifacts
 
