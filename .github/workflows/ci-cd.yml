@@ -43,8 +43,8 @@ jobs:
         with:
           name: dest
           path: |
-            dest
-            package.json
+            ./dest
+            ./package.json
 
   
   deploy:
