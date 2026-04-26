@@ -75,7 +75,7 @@ jobs:
           SCRIPT_AFTER: |
             whoami
             ls -al
-            echo $RSYNC_STDOUT
+            pm2 restart "http-app" || pm2 start npm --name "http-app" -- start 
 
       
       
