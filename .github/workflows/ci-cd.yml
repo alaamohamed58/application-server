@@ -41,10 +41,10 @@ jobs:
         uses: actions/upload-artifact@v4
 
         with:
-          name: dest
+          name: dist
           path: |
-            ./dest
-            ./package.json
+            dist
+            package.json
 
   
   deploy:
@@ -55,7 +55,7 @@ jobs:
 
         uses: actions/download-artifact@v4 
         with : 
-          name: dest
+          name: dist
           path: ./
 
       
@@ -64,11 +64,11 @@ jobs:
         with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-rlgoDzvc -i"
-          SOURCE: "dest/"
+          SOURCE: "dist/ package.json"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.REMOTE_TARGET }}
-          #EXCLUDE: "/dist/, /node_modules/"
+          EXCLUDE: "/dist/, /node_modules/"
           SCRIPT_BEFORE: |
             whoami
             ls -al
