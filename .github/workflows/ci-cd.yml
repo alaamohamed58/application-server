@@ -16,7 +16,7 @@ on:
 jobs:
   test_and_build: 
     runs-on: ubuntu-latest
-
+    
     steps:
        #clone code on VM/runner
       - name: clone the code
@@ -68,7 +68,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.REMOTE_TARGET }}
-        #  EXCLUDE: "/dist/, /node_modules/"
+          #EXCLUDE: "/dist/, /node_modules/"
           SCRIPT_BEFORE: |
             whoami
             ls -al
