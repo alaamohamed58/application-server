@@ -69,5 +69,5 @@ jobs:
             whoami
             ls -al
           SCRIPT_AFTER: |
-            cd ${{ secrets.REMOTE_TARGET }}
-            pm2 restart http-app ||  pm2 start npm --name http-app -- start
+             
+              pm2 restart http-app || pm2 start npm --name http-app -- start
