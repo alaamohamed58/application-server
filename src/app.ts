@@ -8,11 +8,16 @@ function bootstrap() {
 
     if (method === "GET" && url === "/") {
       res.writeHead(200, { "Content-Type": "application/json" });
-      res.end(JSON.stringify({ message: "Hello Github actions" }));
+      res.end(JSON.stringify({ message: "Hello Github actions UPDATE 2" }));
       return;
     }
 
-    
+      if (method === "GET" && url === "/message") {
+      res.writeHead(200, { "Content-Type": "application/json" });
+      res.end(JSON.stringify({ message: "new message" }));
+      return;
+    }
+
     res.writeHead(404, { "Content-Type": "application/json" });
     res.end(JSON.stringify({ error: "Not Found" }));
   });
