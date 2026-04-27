@@ -12,7 +12,7 @@ function bootstrap() {
       return;
     }
 
-      if (method === "GET" && url === "/message") {
+      if (method === "GET" && url === "/message2") {
       res.writeHead(200, { "Content-Type": "application/json" });
       res.end(JSON.stringify({ message: "new message" }));
       return;
