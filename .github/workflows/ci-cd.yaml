@@ -25,8 +25,8 @@ jobs:
         with:
           node-version: 24
 
-      - name: install node js packages
-        run: npm install
+      # - name: install node js packages
+      #   run: npm install
 
 
       # - name: run test 
