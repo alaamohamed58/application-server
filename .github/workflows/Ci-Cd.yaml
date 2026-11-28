@@ -1,0 +1,23 @@
+name: Application Server
+
+on:
+  push:
+    branches:
+    - main
+    - "feature/**"
+
+jobs:
+  build-code:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v7
+
+    - name: install Node.js On Runner
+      uses: actions/setup-node@v7
+
+    - name: install Packages
+      run: npm install
+
+    - name: compile Source Code
+      run: npm run build
